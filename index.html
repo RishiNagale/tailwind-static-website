@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ninestars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+</head>
+<body>
+    <!-- <nav class="bg-white-200 text-black">
+        
+        <ul class="px-2 py-4 flex space-x-7 justify-end">
+            <li class="text-orange-600">Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Portfolio</li>
+            <li>Team</li>
+            <li>Contact</li>
+        </ul>
+    </nav> -->
+  
+    
+<nav class="bg-white border-gray-200 dark:bg-white dark:border-slate-100 drop-shadow-lg">
+    <div class="flex flex-wrap items-center justify-between p-3">
+      <a href="#" class="flex items-center">
+          <span class="self-center text-2xl font-sans font-normal whitespace-nowrap dark:text-n
+           tracking-wider ml-20">Ninestars</span>
+      </a>
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-full md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="flex md:order-2">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none rounded-full text-sm px-4 py-2 text-center md:mr-20 dark:bg-orange-500 dark:hover:bg-orange-700 font-medium font-sans tracking-wide">Get started</button>
+    </div>
+      <div class="hidden w-full md:block md:w-fit" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-3 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:ml-96 md:bg-white dark:bg-gray-200 md:dark:bg-white dark:border-slate-700">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-orange-700 rounded md:bg-transparent md:text-orange-700 md:p-0 md:dark:text-orange-500 dark:bg-orange-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-neutral-950 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-zinc-950 md:dark:hover:bg-transparent">About Us</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-neutral-950 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-zinc-950 md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-neutral-950 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-zinc-950 md:dark:hover:bg-transparent">Portfolio</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-neutral-950 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-zinc-950 md:dark:hover:bg-transparent">Team</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-neutral-950 md:dark:hover:text-orange-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-neutral-950 md:dark:hover:text-orange-500 dark:hover:bg-gray-700 dark:hover:text-zinc-950 md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="bg-fuchsia-100 flex justify-around border-b-2 border-red-200">
+    <div class="main py-40 pl-20">
+        <div class="text-5xl mb-4 font-bold font-serif dark:text-amber-950">
+            Better digital experience with Ninestars
+        </div>
+        <p class="text-2xl mb-4 font-semibold dark:text-zinc-600">We are team of talented designers making websites with Bootstrap</p>
+        <div class="my-4">
+            <button class="bg-orange-500 px-2 py-1 rounded text-white tracking-wide">Get Started</button>
+        </div>
+    </div>
+    <div class="flex items-center">
+        <img src="hero-img.svg" class="h-5/6 w-5/6 pl-12">
+    </div>
+  </main>
+
+  
+  <section class="text-gray-800 bg-white body-font mx-14">
+    <div class="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <img class="object-cover object-center rounded" alt="hero" src="about-img.svg">
+      </div>
+      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-bold font-serif text-amber-950">Voluptatem dignissimos provident
+          <br class="hidden lg:inline-block">quasi
+        </h1>
+        <p class="mb-8 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="flex flex-row">
+          <div class="pr-5">
+                <div class="mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="stroke-current text-orange-500 w-10 h-10">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                    </svg>
+                </div>
+                <div class="mb-2">
+                    <p class="text-xl font-serif font-semibold">Corporis voluptates sit</p>
+                </div>
+                <div class="text-sm leading-relaxed">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div> 
+          </div>
+          <div>
+                <div class="mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class=" stroke-current text-orange-500 w-10 h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                    </svg>  
+                </div>
+                <div class="mb-2">
+                    <p class="text-xl font-serif font-semibold">Ullmco laboris nisi</p>
+                </div>
+                <div class="text-sm leading-relaxed">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                </div> 
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="text-stone-800 body-font bg-fuchsia-100 ">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-2xl font-sans font-bold text-center text-stone-400">Services</h2>
+        <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">Check out the great services we offer</h1>
+        <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+          
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+          <div class=" bg-white px-8 py-8 rounded-lg shadow-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class=" stroke-current text-orange-500 w-10 h-10 mb-3 inline-block ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.712 4.33a9.027 9.027 0 011.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 00-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 010 9.424m-4.138-5.976a3.736 3.736 0 00-.88-1.388 3.737 3.737 0 00-1.388-.88m2.268 2.268a3.765 3.765 0 010 2.528m-2.268-4.796a3.765 3.765 0 00-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 01-1.388.88m2.268-2.268l4.138 3.448m0 0a9.027 9.027 0 01-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0l-3.448-4.138m3.448 4.138a9.014 9.014 0 01-9.424 0m5.976-4.138a3.765 3.765 0 01-2.528 0m0 0a3.736 3.736 0 01-1.388-.88 3.737 3.737 0 01-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 01-1.652-1.306 9.027 9.027 0 01-1.306-1.652m0 0l4.138-3.448M4.33 16.712a9.014 9.014 0 010-9.424m4.138 5.976a3.765 3.765 0 010-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 011.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 00-1.652 1.306A9.025 9.025 0 004.33 7.288" />
+            </svg>
+              
+            <h2 class="title-font font-semibold font-serif text-xl text-gray-900 leading-relaxed mb-2">Lorem Ipsum</h2>
+            <p class="leading-relaxed mb-2">Pretium nibh ipsum consequat nisl vel. Blandit massa enim nec dui nunc. A erat nam at lectus urna duis convallis.</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class=" bg-white px-8 py-8 rounded-lg shadow-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class=" stroke-current text-orange-500 w-10 h-10 mb-3 inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+                  
+                <h2 class="title-font font-semibold font-serif text-xl text-gray-900 leading-relaxed mb-2">Sed ud perceptiatis</h2>
+                <p class="leading-relaxed mb-2">Pretium nibh ipsum consequat nisl vel. Blandit massa enim nec dui nunc. A erat nam at lectus urna duis convallis.</p>
+              </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class=" bg-white px-8 py-8 rounded-lg shadow-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class=" stroke-current text-orange-500 w-10 h-10 mb-3 inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+                  </svg>
+                  
+                  
+                <h2 class="title-font font-semibold font-serif text-xl text-gray-900 leading-relaxed mb-2">Magni Dolores</h2>
+                <p class="leading-relaxed mb-2">Pretium nibh ipsum consequat nisl vel. Blandit massa enim nec dui nunc. A erat nam at lectus urna duis convallis.</p>
+            </div>
+        </div>
+        <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class=" bg-white px-8 py-8 rounded-lg shadow-xl">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class=" text-orange-500 w-10 h-10 mb-3 inline-block">
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z" clip-rule="evenodd" />
+                  </svg>
+                  
+                  
+                <h2 class="title-font font-semibold font-serif text-xl text-gray-900 leading-relaxed mb-2">Nemo Enim</h2>
+                <p class="leading-relaxed mb-2">Pretium nibh ipsum consequat nisl vel. Blandit massa enim nec dui nunc. A erat nam at lectus urna duis convallis.</p>
+              </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+<section class="text-stone-800 body-font bg-white mb-10">
+    <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-col text-center w-full">
+            <h2 class="text-2xl font-sans font-bold text-center text-stone-400">Portfolio</h2>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">Check out our beautiful portfolio</h1>
+            <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+        </div>
+        <div>
+            <ul class="flex flex-col font-medium text-lg md:p-0  md:flex-row md:space-x-8 justify-center mb-14">
+                <li class="text-orange-500">All</li>
+                <li>App</li>
+                <li>Card</li>
+                <li>Web</li>
+            </ul>
+        </div>
+
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="/Task_Files/portfolio-1.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-2.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-3.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-4.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-5.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-6.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-7.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-8.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/portfolio-9.jpg" alt="">
+            </div>
+        </div>   
+    </div>
+</section>
+
+<section class="text-stone-800 body-font bg-fuchsia-100 mb-10 pb-12">
+    <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-col text-center w-full">
+            <h2 class="text-2xl font-sans font-bold text-center text-stone-400">F.A.Q</h2>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">Frequently Asked Questions</h1>
+            <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+         </div>
+
+         <div class="flex flex-row text-left pl-16 m-4">
+        
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">At volutpat diam ut venenatis tellus in metus vulputate?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    
+        <div class="flex flex-row text-left pl-16 m-4">
+            
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">Cursus in hac habitasse platea dictumst quisque sagittis purus sit?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    
+        <div class="flex flex-row text-left pl-16 m-4">
+            
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">Gravida cum sociis natoque penatibus et magnis dis parturient montese?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    
+        <div class="flex flex-row text-left pl-16 m-4">
+            
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">Semper quis lectus nulla at volutpat diam ut venenatis?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    
+        <div class="flex flex-row text-left pl-16 m-4">
+            
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">Egestas maecenas pharetra convallis posuere morbi leo urna molestie at?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    
+        <div class="flex flex-row text-left pl-16 m-4">
+            
+            <div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                </svg>  
+            </div>
+            <div class="w-full">
+                <p class="text-lg font-medium">Amet commodo nulla facilisi nullam vehicula?</p>
+            </div>
+        </div>
+        <hr class="my-1 mx-20 h-px  bg-gray-100 border-0 dark:bg-gray-300">
+    </div>
+</section>
+
+<section class="text-stone-800 body-font bg-white mb-10">
+    <div class="container px-5 py-5 mx-auto">
+        <div class="flex flex-col text-center w-full">
+            <h2 class="text-2xl font-sans font-bold text-center text-stone-400">Team</h2>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">Our team is always here to help</h1>
+            <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+        </div>
+
+        
+        <div class="grid grid-cols-4 gap-3">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/team-1.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/team-2.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/team-3.jpg" alt="">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="Task_Files/team-4.jpg" alt="">
+            </div>
+        </div>   
+    </div>
+</section>
+
+<section class="text-stone-800 body-font bg-fuchsia-100 ">
+    <div class="container px-5 py-12 mx-auto -mb-10">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-2xl font-sans font-bold text-center text-stone-400">Clients</h2>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">They trusted us</h1>
+            <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+        </div>
+
+        <div class="grid grid-cols-6 gap-5 ">
+            <div>
+                <img class="h-3/4 w-3/4 p-1 rounded-lg" src="Task_Files/client-1.png" alt="">
+            </div>
+            <div>
+                <img class="h-3/4 w-3/4 p-1 rounded-lg" src="Task_Files/client-2.png" alt="">
+            </div>
+            <div>
+                <img class="h-3/4 2-3/4 p-1 rounded-lg" src="Task_Files/client-3.png" alt="">
+            </div>
+            <div>
+                <img class="h-3/4 2-3/4 p-1 rounded-lg" src="Task_Files/client-4.png" alt="">
+            </div>
+            <div>
+                <img class="h-3/4 2-3/4 p-1 rounded-lg" src="Task_Files/client-5.png" alt="">
+            </div>
+            <div>
+                <img class="h-3/4 2-3/4 p-1 rounded-lg" src="Task_Files/client-6.png" alt="">
+            </div>
+        </div>
+        <div class="flex flex-row justify-center mb-5">
+            <div class="w-3 h-3 rounded-full inline-flex items-center justify-center bg-white border-2 border-orange-500 m-2"></div>
+            <div class="w-3 h-3 rounded-full inline-flex items-center justify-center bg-orange-500 border-2 border-orange-500 m-2"></div>
+            <div class="w-3 h-3 rounded-full inline-flex items-center justify-center bg-white border-2 border-orange-500 m-2"></div>
+            <div class="w-3 h-3 rounded-full inline-flex items-center justify-center bg-white border-2 border-orange-500 m-2"></div>
+            <div class="w-3 h-3 rounded-full inline-flex items-center justify-center bg-white border-2 border-orange-500 m-2"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="text-stone-800 body-font bg-white pb-10">
+    <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-col text-center w-full">
+            <h2 class="text-2xl font-sans font-bold text-center text-stone-400">Contact Us</h2>
+            <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-amber-950 mt-2">Contact us to get started</h1>
+            <hr class="w-16 h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded mt-2 mb-10 dark:bg-orange-500">
+        </div>
+        
+            <div class="flex justify-around">
+                <div class="left bg-white rounded-lg border-t-2 border-b-2 border-orange-500 drop-shadow-xl flex basis-auto mx-auto -mr-44">
+                    <div class="flex flex-col">
+                        <div class="flex flex-row pb-4">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class=" stroke-current text-orange-500 w-9 h-9 p-2 mt-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col flex-wrap">
+                                <div><p class="font-bold text-lg text-amber-950 mt-2">Location:</p></div>
+                                <div>
+                                    <p class="font-sans text-gray-500 text-xs">A108 Adam Street, New York, NY 535022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row pb-4">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class=" stroke-current text-orange-500 w-9 h-9 p-2 mt-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                  </svg>
+                                  
+                            </div>
+                            <div class="flex flex-col flex-wrap">
+                                <div><p class="font-bold text-amber-950 text-lg mt-2">Email:</p></div>
+                                <div>
+                                    <p class="font-sans text-gray-500 text-xs">info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row pb-4">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"  class=" stroke-current text-orange-500 w-9 h-9 p-2 mt-1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                                </svg>                              
+                            </div>
+                            <div class="flex flex-col flex-wrap">
+                                <div><p class="font-bold font-sans text-amber-950 text-lg mt-2">Call:</p></div>
+                                <div>
+                                    <p class="font-sans text-gray-500 text-xs">+1 5589 55488 53</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img class="object-cover h-80 w-96 p-5 rounded-md" src="thumbnail.jpg" alt="">
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="right bg-white rounded-lg border-t-2 border-b-2 border-orange-500 drop-shadow-xl text-gray-600 body-font mx-auto px-7 py-7 flex basis-2/5">
+                            <div class="flex flex-wrap">
+                              <div class="p-2 w-1/2">
+                                <div class="relative">
+                                  <label for="name" class="leading-7 text-base font-medium text-gray-600">Your Name</label>
+                                  <input type="text" id="name" name="name" placeholder="Your Name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                              </div>
+                              <div class="p-2 w-1/2">
+                                <div class="relative">
+                                  <label for="email" class="leading-7 text-base font-medium text-gray-600">Your Email</label>
+                                  <input type="email" id="email" name="email" placeholder="Your Email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                              </div>
+                              <div class="p-2 w-full">
+                                <div class="relative">
+                                  <label for="message" class="leading-7 text-base font-medium text-gray-600">Subject</label>
+                                  <textarea id="message" name="message" placeholder="Subject" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-8 transition-colors duration-200 ease-in-out"></textarea>
+                                </div>
+                              </div>
+                              <div class="p-2 w-full">
+                                <div class="relative">
+                                  <label for="message" class="leading-7 text-base font-medium text-gray-600">Message</label>
+                                  <textarea id="message" name="message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-sm outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                </div>
+                              </div>
+                              <div class="p-2 w-full">
+                                <button class="flex mx-auto text-white dark:bg-orange-500 dark:hover:bg-orange-700 border-0 py-2 px-8 focus:outline-none rounded text-lg">Send Message</button>
+                              </div>
+    
+                            </div>
+                        
+        
+                </div>
+            </div>
+            
+        </div>
+</section>
+
+<section class="text-stone-800 body-font bg-fuchsia-100 pb-10">
+        <h2 class="font serif font-bold text-amber-950 text-2xl text-center p-9 -mb-4">Join Our Newsletter</h2>
+        <p class="leading-relaxed text-sm text-center">Ultrices gravida dictum fusce ut. Purus gravida quis blandit turpis cursus in hac habitasse. Ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet. </p>
+        
+        <div class="flex flex-row justify-center mx-auto">
+            <div class="mt-12 bg-white w-96 h-10 shadow-xl rounded-sm"></div>
+            <button class="flex text-white dark:bg-orange-500 dark:hover:bg-orange-700 border-0 mt-12 py-2 px-3 rounded-sm focus:outline-none h-10 shadow-xl">Subscribe</button>
+        </div>
+    </div>
+</section>
+
+<section class="text-stone-800 body-font bg-white mb-12">
+    <div class="grid grid-cols-4 gap-3 mx-auto">
+        <div class="text-left ml-20 pt-10">
+            <h2 class="text-4xl font-sans tracking-wider">Ninestars</h2>
+            <p class="mt-4 mb-5 text-sm">A108 Adam Street<br>
+               New York, NY 535022<br>
+               United States 
+            </p>
+            <p class="text-sm font-serif"><b>Phone: </b>+1 5589 55488 55<br>
+               <b>Email: </b>info@example.com
+            </p>
+        </div>
+        <div class="text-left pt-9">
+            <h3 class="font-sans text-lg font-bold mb-3">Useful Links</h3>
+            <ul>
+                <li class="mb-2 text-sm">Home</li>
+                <li class="mb-2 text-sm">About Us</li>
+                <li class="mb-2 text-sm">Services</li>
+                <li class="mb-2 text-sm">Terms of service</li>
+                <li class="mb-2 text-sm">Privacy policy</li>
+            </ul>
+        </div>
+        <div class="text-left pt-9">
+            <h3 class="font-sans text-lg font-bold mb-3">Our Services</h3>
+            <ul>
+                <li class="mb-2 text-sm">Web Design</li>
+                <li class="mb-2 text-sm">Web Development</li>
+                <li class="mb-2 text-sm">Product Management</li>
+                <li class="mb-2 text-sm">Marketing</li>
+                <li class="mb-2 text-sm">Graphic Design</li>
+            </ul>
+        </div>
+        <div class="text-left pt-9">
+            <h3 class="font-sans text-lg font-bold mb-3">Our Social Networks</h3>
+            <p class="text-sm tracking-wide text-clip">Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus</p>
+            <div class="px-4 py-6 bg-gray-100 dark:bg-white md:flex md:items-center md:justify-between">
+                <div class="flex mt-4 space-x-5 sm:justify-center md:mt-0">
+                    <a href="#" class="text-orange-500 hover:text-gray-900 dark:hover:text-orange-700">
+                          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                                <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                            </svg>
+                          <span class="sr-only">Facebook page</span>
+                      </a>
+                      <a href="#" class="text-orange-500 hover:text-gray-900 dark:hover:text-orange-700">
+                          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                                <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                            </svg>
+                          <span class="sr-only">Discord community</span>
+                      </a>
+                      <a href="#" class="text-orange-500 hover:text-gray-900 dark:hover:text-orange-700">
+                          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                            <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                        </svg>
+                          <span class="sr-only">Twitter page</span>
+                      </a>
+                      <a href="#" class="text-orange-500 hover:text-gray-900 dark:hover:text-orange-700">
+                          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                          </svg>
+                          <span class="sr-only">GitHub account</span>
+                      </a>
+                      <a href="#" class="text-orange-500 hover:text-gray-900 dark:hover:text-orange-700">
+                          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+                        </svg>
+                          <span class="sr-only">Dribbble account</span>
+                      </a>
+                </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
